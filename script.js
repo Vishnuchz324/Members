@@ -92,62 +92,62 @@ function atvImg(){
 	    }
 	}
 
-	function processMovement(e, touchEnabled, elem, layers, totalLayers, shine){
+	// function processMovement(e, touchEnabled, elem, layers, totalLayers, shine){
 
-		var bdst = bd.scrollTop || htm.scrollTop,
-			bdsl = bd.scrollLeft,
-			pageX = (touchEnabled)? e.touches[0].pageX : e.pageX,
-			pageY = (touchEnabled)? e.touches[0].pageY : e.pageY,
-			offsets = elem.getBoundingClientRect(),
-			w = elem.clientWidth || elem.offsetWidth || elem.scrollWidth,
-			h = elem.clientHeight || elem.offsetHeight || elem.scrollHeight,
-			wMultiple = 320/w,
-			offsetX = 0.52 - (pageX - offsets.left - bdsl)/w,
-			offsetY = 0.52- (pageY - offsets.top - bdst)/h,
-			dy = (pageY - offsets.top - bdst) - h / 2,
-			dx = (pageX - offsets.left - bdsl) - w / 2,
-			yRotate = (offsetX - dx)*(0.07 * wMultiple),
-			xRotate = (dy - offsetY)*(0.07 * wMultiple),
-			imgCSS = 'rotateX(' + xRotate + 'deg) rotateY(' + yRotate + 'deg)',
-			arad = Math.atan2(dy, dx),
-			angle = arad * 180 / Math.PI - 90;
+	// 	var bdst = bd.scrollTop || htm.scrollTop,
+	// 		bdsl = bd.scrollLeft,
+	// 		pageX = (touchEnabled)? e.touches[0].pageX : e.pageX,
+	// 		pageY = (touchEnabled)? e.touches[0].pageY : e.pageY,
+	// 		offsets = elem.getBoundingClientRect(),
+	// 		w = elem.clientWidth || elem.offsetWidth || elem.scrollWidth,
+	// 		h = elem.clientHeight || elem.offsetHeight || elem.scrollHeight,
+	// 		wMultiple = 320/w,
+	// 		offsetX = 0.52 - (pageX - offsets.left - bdsl)/w,
+	// 		offsetY = 0.52- (pageY - offsets.top - bdst)/h,
+	// 		dy = (pageY - offsets.top - bdst) - h / 2,
+	// 		dx = (pageX - offsets.left - bdsl) - w / 2,
+	// 		yRotate = (offsetX - dx)*(0.07 * wMultiple),
+	// 		xRotate = (dy - offsetY)*(0.07 * wMultiple),
+	// 		imgCSS = 'rotateX(' + xRotate + 'deg) rotateY(' + yRotate + 'deg)',
+	// 		arad = Math.atan2(dy, dx),
+	// 		angle = arad * 180 / Math.PI - 90;
 
-		if (angle < 0) {
-			angle = angle + 360;
-		}
+	// 	if (angle < 0) {
+	// 		angle = angle + 360;
+	// 	}
 
-		if(elem.firstChild.className.indexOf(' over') != -1){
-			imgCSS += ' scale3d(1.05,1.05,1.05)';
-		}
-		elem.firstChild.style.transform = imgCSS;
+	// 	if(elem.firstChild.className.indexOf(' over') != -1){
+	// 		imgCSS += ' scale3d(1.05,1.05,1.05)';
+	// 	}
+	// 	elem.firstChild.style.transform = imgCSS;
 		
-		shine.style.background = 'linear-gradient(' + angle + 'deg, rgba(255,255,255,' + (pageY - offsets.top - bdst)/h * 0.1 + ') 0%,rgba(255,255,255,0) 80%)';
-		shine.style.transform = 'translateX(' + (offsetX * totalLayers) - 0.1 + 'px) translateY(' + (offsetY * totalLayers) - 0.1 + 'px)';	
+	// 	shine.style.background = 'linear-gradient(' + angle + 'deg, rgba(255,255,255,' + (pageY - offsets.top - bdst)/h * 0.1 + ') 0%,rgba(255,255,255,0) 80%)';
+	// 	shine.style.transform = 'translateX(' + (offsetX * totalLayers) - 0.1 + 'px) translateY(' + (offsetY * totalLayers) - 0.1 + 'px)';	
 
-		var revNum = totalLayers;
-		for(var ly=0;ly<totalLayers;ly++){
-			layers[ly].style.transform = 'translateX(' + (offsetX * revNum) * ((ly * 2.5) / wMultiple) + 'px) translateY(' + (offsetY * totalLayers) * ((ly * 2.5) / wMultiple) + 'px)';
-			revNum--;
-		}
-	}
+	// 	var revNum = totalLayers;
+	// 	for(var ly=0;ly<totalLayers;ly++){
+	// 		layers[ly].style.transform = 'translateX(' + (offsetX * revNum) * ((ly * 2.5) / wMultiple) + 'px) translateY(' + (offsetY * totalLayers) * ((ly * 2.5) / wMultiple) + 'px)';
+	// 		revNum--;
+	// 	}
+	// }
 
-	function processEnter(e, elem){
-		elem.firstChild.className += ' over';
-	}
+	// function processEnter(e, elem){
+	// 	elem.firstChild.className += ' over';
+	// }
 
-	function processExit(e, elem, layers, totalLayers, shine){
+	// function processExit(e, elem, layers, totalLayers, shine){
 
-		var container = elem.firstChild;
+	// 	var container = elem.firstChild;
 
-		container.className = container.className.replace(' over','');
-		container.style.transform = '';
-		shine.style.cssText = '';
+	// 	container.className = container.className.replace(' over','');
+	// 	container.style.transform = '';
+	// 	shine.style.cssText = '';
 		
-		for(var ly=0;ly<totalLayers;ly++){
-			layers[ly].style.transform = '';
-		}
+	// 	for(var ly=0;ly<totalLayers;ly++){
+	// 		layers[ly].style.transform = '';
+	// 	}
 
-	}
+	// }
 
 }
 
