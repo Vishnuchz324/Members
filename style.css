@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css?family=Lato:400|Josefin+Sans:700");
 body {
 	background : rgb(153,174,255,0.8);
 }
@@ -8,10 +9,18 @@ body {
 	margin: 30px 0px;
 	text-align: center;
 	font-size: 200%;
-	font-family: 'Texturina', serif;
+	font-family: 'Josefin Sans', serif;
 	color:black;
 	padding:20px;
+
 }
+.neon {
+    color: #D0F8FF;
+    text-shadow: 0 0 5px #A5F1FF, 0 0 10px #A5F1FF,
+             0 0 20px #A5F1FF, 0 0 30px #A5F1FF,
+             0 0 40px #A5F1FF;
+}
+
 .container-jnrs .container-snrs{
 	width:100%;
 	position:absolute;
@@ -112,3 +121,8 @@ body {
 	border-radius: 8px;
 	background: linear-gradient(135deg, rgba(255,255,255,.25) 0%,rgba(255,255,255,0) 60%);
 }
+
+#center {    
+	text-align: center;  
+	}  
+
