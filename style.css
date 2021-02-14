@@ -1,6 +1,9 @@
 @import url("https://fonts.googleapis.com/css?family=Lato:400|Josefin+Sans:700");
 body {
-	background : rgb(153,174,255,0.8);
+  background-image: url("slide2.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size:cover;
 }
 .members{
 	margin:0px 10px 0px 15px;
