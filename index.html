@@ -10,10 +10,25 @@
     <script src="./lazy.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Texturina:wght@500&display=swap" rel="stylesheet">
 </head>
-<body">
+
+<body  style="background-image: url('slide2.jpg');">
+
     <section class="members" id="center">
-        <h1 class="neon">SENIOR EXECUTIVES</h1>
-        <div class="container-snrs">
+
+        <svg viewBox="0 0 600 150">
+            <!-- Symbol-->
+            <symbol id="s-text">
+              <text text-anchor="middle" x="50%" y="50%" dy=".35em">senior EXECUTIVES</text>
+            </symbol>
+            <!-- Duplicate symbols-->
+            <use class="text" xlink:href="#s-text"></use>
+            <use class="text" xlink:href="#s-text"></use>
+            <use class="text" xlink:href="#s-text"></use>
+            <use class="text" xlink:href="#s-text"></use>
+            <use class="text" xlink:href="#s-text"></use>
+          </svg>
+        <div class="container-snrs" >
+            
             <div class="cover atvImg">
                 <div class="atvImg-layer" data-img="./img-snrs/AKARSH.webp"></div>
             </div>
@@ -25,9 +40,6 @@
             </div>
             <div class="cover atvImg">
                 <div class="atvImg-layer" data-img="./img-snrs/AMRUTHA.webp"></div>
-            </div>
-            <div class="cover atvImg">
-                <div class="atvImg-layer" data-img="./img-snrs/ANANTHAN.webp"></div>
             </div>
             <div class="cover atvImg">
                 <div class="atvImg-layer" data-img="./img-snrs/ANNA.webp"></div>
@@ -98,9 +110,6 @@
             <div class="lazy cover atvImg">
                 <div class="atvImg-layer" data-img="./img-snrs/SAI.webp"></div>
             </div>
-             <div class="lazy cover atvImg">
-                <div class="atvImg-layer" data-img="./img-snrs/SREELAYA.webp"></div>
-            </div>
             <div class="lazy cover atvImg">
                 <div class="atvImg-layer" data-img="./img-snrs/SUPRIYA.webp"></div>
             </div>
@@ -110,8 +119,25 @@
             <div class="lazy cover atvImg">
                 <div class="atvImg-layer" data-img="./img-snrs/VATSAV.webp"></div>
             </div>
+            <div class="lazy cover atvImg">
+                <div class="atvImg-layer" data-img="./img-snrs/ANANTHAN.webp"></div>
+            </div>
+            <div class="lazy cover atvImg">
+                <div class="atvImg-layer" data-img="./img-snrs/SREELAYA.webp"></div>
+            </div>
         </div>
-        <h1 class="neon">JUNIOR EXECUTIVES</h1>
+        <svg viewBox="0 0 600 150">
+            <!-- Symbol-->
+            <symbol id="j-text">
+              <text text-anchor="middle" x="50%" y="50%" dy=".35em">JUNIOR EXECUTIVES</text>
+            </symbol>
+            <!-- Duplicate symbols-->
+            <use class="text" xlink:href="#j-text"></use>
+            <use class="text" xlink:href="#j-text"></use>
+            <use class="text" xlink:href="#j-text"></use>
+            <use class="text" xlink:href="#j-text"></use>
+            <use class="text" xlink:href="#j-text"></use>
+          </svg>
         <div class="container-jnrs">
             <div class="lazy cover atvImg">
                 <div class="atvImg-layer" data-img="./img-jnrs/ABHAY.webp"></div>
@@ -200,6 +226,6 @@
         </div>
     </section>
     <script src="./script.js"></script>
-    </body>
+</body>
 
 </html>
