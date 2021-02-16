@@ -171,6 +171,9 @@ body {
 
 svg {
  
+	min-width: 500px;
+	min-height: 100px;
+ margin-top:50px ;
   width: 50%;
 
 }
